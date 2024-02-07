@@ -3,7 +3,7 @@
 import styles from "./page.module.css";
 import { useEffect, useState } from "react";
 
-const startTime = 1707291000;
+const startTime = 1707296400;
 
 export default function Home() {
   const [currTime, setCurrTime] = useState<number>(0);
