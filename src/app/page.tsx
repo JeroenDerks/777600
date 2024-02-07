@@ -8,13 +8,11 @@ const startTime = 1707296400;
 export default function Home() {
   const [currTime, setCurrTime] = useState<number>(0);
 
-  // Second Attempts
   useEffect(() => {
     setInterval(() => {
       const _currTime = Math.round(new Date().getTime() * 0.001);
-      console.log({ _currTime, startTime });
       setCurrTime(_currTime);
-    }, 1000);
+    }, 100);
   }, []);
 
   return (
