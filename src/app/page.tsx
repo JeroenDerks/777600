@@ -33,9 +33,14 @@ export default function Home() {
             <h4>777600</h4>
           </div>
 
-          <a href="intent:///registration/cd9f6330-4bbf-42d1-8190-76c3f791dc59#intent;scheme=com.keesing.documentchecker.dev;package=com.keesing.documentchecker.dev;s.browser_fallback_url=/registration/cd9f6330-4bbf-42d1-8190-76c3f791dc59;end">
+          <button
+            onClick={() => {
+              window.location.href =
+                "intent:///registration/cd9f6330-4bbf-42d1-8190-76c3f791dc59#intent;scheme=com.keesing.documentchecker.dev;package=com.keesing.documentchecker.dev;s.browser_fallback_url=/registration/cd9f6330-4bbf-42d1-8190-76c3f791dc59;end";
+            }}
+          >
             Test on android
-          </a>
+          </button>
         </div>
       </div>
     </main>
