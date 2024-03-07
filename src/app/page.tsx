@@ -2,8 +2,11 @@
 
 import styles from "./page.module.css";
 import { useEffect, useState } from "react";
+import localFont from "next/font/local";
 
-const startTime = 1707296400;
+// Font files can be colocated inside of `pages`
+const myFont = localFont({ src: "../asset/digital_counter_7_italic.ttf" });
+const startTime = 1710147600;
 
 export default function Home() {
   const [currTime, setCurrTime] = useState<number>(0);
@@ -18,19 +21,25 @@ export default function Home() {
   return (
     <main className={styles.main}>
       <div className={styles.description}>
-        <div>
-          <h3>Ik tel sinds: {new Date(startTime * 1000).toLocaleString()}</h3>
-          <div style={{ display: "flex", gap: "64px", marginTop: 100 }}>
-            <h4>Geweest: </h4>
-            <h4>{currTime - startTime}</h4>
+        <div className={`${myFont.className}`}>
+          <div>
+            <h5 className={styles.subTitle}>Seconden tot 11 maart 10:00 </h5>
+            <br />
+            <h4 className={styles.title}> {currTime - startTime}</h4>
           </div>
-          <div style={{ display: "flex", gap: "64px", marginTop: 24 }}>
-            <h4>Te gaan: </h4>
-            <h4>{777600 - (currTime - startTime)}</h4>
+          <br />
+          <div style={{ gap: "64px", marginTop: 200 }}>
+            <h5 className={styles.subTitle}>Seconden sinds 11 maart 10:00 </h5>
+            <h4 className={styles.title}>
+              {startTime < currTime ? currTime - startTime : "0"}
+            </h4>
           </div>
-          <div style={{ display: "flex", gap: "64px", marginTop: 24 }}>
-            <h4>Totaal:</h4>
-            <h4>777600</h4>
+
+          <div style={{ gap: "64px", marginTop: 200 }}>
+            <h5 className={styles.subTitle}>Seconden sinds 07 maart 10:00 </h5>
+            <h4 className={styles.title}>
+              {1709802000 < currTime ? currTime - 1709802000 : "0"}
+            </h4>
           </div>
         </div>
       </div>

@@ -5,6 +5,8 @@
   align-items: center;
   padding: 4rem;
   min-height: 100vh;
+  font-family: DigitalCounter;
+  color: red;
 }
 
 .description {
@@ -16,4 +18,20 @@
   width: 100%;
   z-index: 2;
   font-family: var(--font-mono);
+}
+
+@font-face {
+  font-family: "DigitalCounter";
+  src: url("../asset/digital_counter_7_italic.ttf");
+}
+
+.title {
+  font-size: 120px;
+}
+
+.subTitle {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 14px;
+  color: grey;
+  margin-bottom: 60px;
 }
