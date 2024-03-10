@@ -25,7 +25,9 @@ export default function Home() {
           <div>
             <h5 className={styles.subTitle}>Seconden tot 11 maart 10:00 </h5>
             <br />
-            <h4 className={styles.title}> {currTime - startTime}</h4>
+            {currTime && startTime && (
+              <h4 className={`${styles.title} `}>{currTime - startTime}</h4>
+            )}
           </div>
           <br />
           <div style={{ gap: "64px", marginTop: 200 }}>

@@ -26,7 +26,6 @@ export default function Home() {
             <h5 className={styles.subTitle}>Seconden tot 11 maart 10:00 </h5>
             <br />
             <h4 className={`${styles.title}  ${styles.bold}`}>
-              {" "}
               {currTime - startTime}
             </h4>
           </div>
