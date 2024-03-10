@@ -1,11 +1,11 @@
 "use client";
 
-import styles from "./page.module.css";
+import styles from "../page.module.css";
 import { useEffect, useState } from "react";
 import localFont from "next/font/local";
 
 // Font files can be colocated inside of `pages`
-const myFont = localFont({ src: "../asset/digital_counter_7_italic.ttf" });
+const myFont = localFont({ src: "../../asset/DigitalPlay.ttf" });
 const startTime = 1710147600;
 
 export default function Home() {
@@ -25,22 +25,19 @@ export default function Home() {
           <div>
             <h5 className={styles.subTitle}>Seconden tot 11 maart 10:00 </h5>
             <br />
-            <h4 className={`${styles.title}  ${styles.bold}`}>
-              {" "}
-              {currTime - startTime}
-            </h4>
+            <h4 className={styles.title}> {currTime - startTime}</h4>
           </div>
           <br />
           <div style={{ gap: "64px", marginTop: 200 }}>
             <h5 className={styles.subTitle}>Seconden sinds 11 maart 10:00 </h5>
-            <h4 className={`${styles.title}  ${styles.bold}`}>
+            <h4 className={styles.title}>
               {startTime < currTime ? currTime - startTime : "0"}
             </h4>
           </div>
 
           <div style={{ gap: "64px", marginTop: 200 }}>
             <h5 className={styles.subTitle}>Seconden sinds 07 maart 10:00 </h5>
-            <h4 className={`${styles.title}  ${styles.bold}`}>
+            <h4 className={styles.title}>
               {1709802000 < currTime ? currTime - 1709802000 : "0"}
             </h4>
           </div>

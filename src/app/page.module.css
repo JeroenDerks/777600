@@ -27,6 +27,7 @@
 
 .title {
   font-size: 120px;
+  font-weight: 400;
 }
 
 .subTitle {
@@ -34,4 +35,8 @@
   font-size: 14px;
   color: grey;
   margin-bottom: 60px;
+}
+
+.bold {
+  font-weight: 600;
 }
