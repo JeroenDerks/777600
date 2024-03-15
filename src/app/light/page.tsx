@@ -23,7 +23,8 @@ export default function Home() {
       <div className={styles.description}>
         <div className={`${myFont.className}`}>
           <div>
-            <h5 className={styles.subTitle}>Seconden tot 11 maart 10:00 </h5>
+            <h5 className={styles.subTitle}>Seconden tot 15 maart 16:00 </h5>
+
             <br />
             {currTime && startTime && (
               <h4 className={`${styles.title} `}>{currTime - startTime}</h4>
@@ -31,16 +32,9 @@ export default function Home() {
           </div>
           <br />
           <div style={{ gap: "64px", marginTop: 200 }}>
-            <h5 className={styles.subTitle}>Seconden sinds 11 maart 10:00 </h5>
+            <h5 className={styles.subTitle}>Seconden sinds 15 maart 16:00 </h5>
             <h4 className={`${styles.title} `}>
               {startTime < currTime ? currTime - startTime : "0"}
-            </h4>
-          </div>
-
-          <div style={{ gap: "64px", marginTop: 200 }}>
-            <h5 className={styles.subTitle}>Seconden sinds 07 maart 10:00 </h5>
-            <h4 className={`${styles.title} `}>
-              {1709802000 < currTime ? currTime - 1709802000 : "0"}
             </h4>
           </div>
         </div>
