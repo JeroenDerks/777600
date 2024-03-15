@@ -6,7 +6,7 @@ import localFont from "next/font/local";
 
 // Font files can be colocated inside of `pages`
 const myFont = localFont({ src: "../../asset/Open24Display.ttf" });
-const startTime = 1710147600;
+const startTime = 1710514800;
 
 export default function Home() {
   const [currTime, setCurrTime] = useState<number>(0);
